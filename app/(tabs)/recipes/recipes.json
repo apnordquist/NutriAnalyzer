@@ -1,0 +1,28 @@
+[
+    {
+        "id": 27,
+        "name": "Chickpea Dahl",
+        "ingredients": [
+            {
+            "id": 1,
+            "quantity": "500 g",
+            "name": "chickpeas",
+            "nutrition": 544.7
+            },
+            {
+            "id": 2,
+            "quantity": "330 ml",
+            "name": "coconut milk",
+            "nutrition": 891.2
+            },
+            {
+            "id": 3,
+            "quantity": "50ml",
+            "name": "tomato paste",
+            "nutrition": 26
+            }
+
+        ], 
+    "directions": "Dice onions and put in a large pot with half the oil. Sweat till translucent and add grated garlic and ginger, then spices and tomato paste. Cook 2-3 minutes till fragrant. Add the 2 cans of coconut milk and simmer for 10-15 minutes till thick. Turn off the heat, add the cilantro and spinach and let wilt in residual heat."
+    }
+]

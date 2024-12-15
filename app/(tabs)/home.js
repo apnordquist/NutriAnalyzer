@@ -1,15 +1,25 @@
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet, Button } from "react-native";
 import React from "react";
-import Button from "../../componenets/button";
+import { useNavigation } from "expo-router";
 
 const Home = () => {
+  const navigation = useNavigation();
   return (
     <View style={{ height: "100%" }}>
       <Text style={styles.Welcome}>Welcome, User!</Text>
       <View style={styles.Menu}>
-        <Button title="View Recipes" destination="/recipes/recipe-list" />
-        <Button title="Add Recipes" destination="/recipes/add-recipe" />
-        <Button title="Shopping List" destination="/shoppinglist" />
+        <Button
+          title="View Recipes"
+          onPress={() => navigation.navigate("recipes")}
+        />
+        <Button
+          title="Add Recipes"
+          onPress={() => navigation.navigate("add-recipe")}
+        />
+        <Button
+          title="Shopping List"
+          onPress={() => navigation.navigate("shoppinglist")}
+        />
       </View>
     </View>
   );

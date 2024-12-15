@@ -1,11 +1,32 @@
-import { View, Pressable, Text, ScrollView } from "react-native";
-import React from "react";
-import Recipe from "../../../componenets/recipe-entry";
+"use client";
+
+import { View, Pressable, Text, ScrollView, Button } from "react-native";
+import React, { useState } from "react";
 import AntDesign from "@expo/vector-icons/AntDesign";
-import { Link } from "expo-router";
-import RecipeData from "../app/recipes.json";
+import { Link, useNavigation } from "expo-router";
+import RecipeEntry from "../../../componenets/recipe-entry";
+import ToShopping from "../../../componenets/add-shopping";
+
+// import { useUserAuth } from "../../_utils/auth-context";
 
 export default function Recipes() {
+  // const { user } = useUserAuth();
+  const recipeData = require("./recipes.json");
+  const navigation = useNavigation();
+  const [shoppingList, setShoppingList] = useState([]);
+
+  const updateList = (newList) => {
+    newList.map((ingredient) => {
+      setShoppingList([...shoppingList, ingredient]);
+    });
+    console.log(shoppingList);
+  };
+
+  // useEffect(() => {
+  //   if (user) {
+  //     dbGetItems(user.uid, setRecipeList);
+  //   }
+  // }, [user]);
   return (
     <View style={{ width: "100%", height: "100%" }}>
       <Text
@@ -19,17 +40,20 @@ export default function Recipes() {
       >
         RECIPE LIST
       </Text>
-      <Text
+      {/* <Text
         style={{
           textAlign: "right",
           padding: 5,
         }}
       >
         add to shopping list
-      </Text>
+      </Text> */}
       <ScrollView>
-        {RecipeData.map((recipe) => (
-          <Recipe name={recipe.name} key={recipe.id} />
+        {recipeData.map((recipe) => (
+          <View>
+            <RecipeEntry key={recipe.id} recipe={recipe} />
+            <ToShopping ingredients={recipe.ingredients} getList={updateList} />
+          </View>
         ))}
       </ScrollView>
 
@@ -50,6 +74,10 @@ export default function Recipes() {
           <AntDesign name="addfile" size={30} color="white" />
         </Link>
       </Pressable>
+      <Text>shopping list</Text>
+      {shoppingList.map((item) => (
+        <Text>{item}</Text>
+      ))}
     </View>
   );
 }

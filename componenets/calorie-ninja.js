@@ -1,11 +1,11 @@
 export default function CalorieNinja({ ingredients }) {
-  const request = require("request");
   var query = ingredients;
-  request.get(
+  getNutrients(
     {
+      method: "GET",
       url: "https://api.calorieninjas.com/v1/nutrition?query=" + query,
       headers: {
-        "X-Api-Key": "YOUR_API_KEY",
+        "X-Api-Key": "KQ7U/sWe7H5CSxKevGjA8w==otU2R9PyKQwXpIJ1",
       },
     },
     function (error, response, body) {

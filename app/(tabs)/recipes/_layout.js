@@ -7,6 +7,7 @@ const _layout = () => {
     <Stack screenOptions={{ headerShown: false }}>
       <Stack.Screen name="recipe-list" />
       <Stack.Screen name="add-recipe" />
+      <Stack.Screen name="view-recipe" />
     </Stack>
   );
 };
