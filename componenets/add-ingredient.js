@@ -48,7 +48,7 @@ const NewIngredient = ({ onAddItemFunc }) => {
         placeholder="ingredient"
         required
       ></TextInput>
-      <Button type="button" onPress={handleAdd} title="add">
+      <Button type="button" color="#ccdc90" onPress={handleAdd} title="add">
         add
       </Button>
     </View>

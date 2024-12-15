@@ -50,13 +50,34 @@ export default function Recipes() {
       </Text> */}
       <ScrollView>
         {recipeData.map((recipe) => (
-          <View>
+          <View
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              gap: 15,
+              textAlign: "center",
+              margin: "auto",
+            }}
+          >
             <RecipeEntry key={recipe.id} recipe={recipe} />
             <ToShopping ingredients={recipe.ingredients} getList={updateList} />
           </View>
         ))}
       </ScrollView>
-
+      <Text
+        style={{
+          fontWeight: "bold",
+          fontSize: 40,
+          textAlign: "center",
+          marginTop: 40,
+          marginBottom: 20,
+        }}
+      >
+        SHOPPING LIST
+      </Text>
+      {shoppingList.map((item) => (
+        <Text style={{ margin: 20 }}>{item}</Text>
+      ))}
       <Pressable
         style={{
           position: "absolute",
@@ -74,10 +95,6 @@ export default function Recipes() {
           <AntDesign name="addfile" size={30} color="white" />
         </Link>
       </Pressable>
-      <Text>shopping list</Text>
-      {shoppingList.map((item) => (
-        <Text>{item}</Text>
-      ))}
     </View>
   );
 }

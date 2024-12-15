@@ -80,12 +80,12 @@ const NewRecipe = () => {
           value={directions}
           onChange={handleDirectionChange}
           placeholder="directions"
-          style={{ fontSize: 20 }}
+          style={{ fontSize: 20, margin: 10 }}
           multiline
         ></TextInput>
       </ScrollView>
 
-      <Button type="submit" onPress={handleSubmit} title="save">
+      <Button type="submit" color="#ccdc90" onPress={handleSubmit} title="save">
         Save
       </Button>
     </View>

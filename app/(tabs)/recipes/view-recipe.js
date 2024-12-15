@@ -49,6 +49,7 @@ export default function ViewRecipe() {
                 color: "white",
                 textAlign: "center",
                 marginLeft: 12,
+                padding: 12,
                 fontSize: 20,
                 backgroundColor: "#ccdc90",
                 width: "50%",
@@ -63,6 +64,7 @@ export default function ViewRecipe() {
                 color: "#1e1e1e",
                 textAlign: "center",
                 marginRight: 12,
+                padding: 12,
                 fontSize: 20,
                 width: "50%",
                 backgroundColor: "white",
@@ -76,6 +78,7 @@ export default function ViewRecipe() {
               fontWeight: "bold",
               color: "#1e1e1e",
               textAlign: "center",
+              padding: 12,
               fontSize: 32,
               margin: 24,
             }}
@@ -98,6 +101,7 @@ export default function ViewRecipe() {
                 color: "#1e1e1e",
                 textAlign: "center",
                 marginLeft: 12,
+                padding: 12,
                 fontSize: 20,
                 width: "50%",
                 backgroundColor: "white",
@@ -112,6 +116,7 @@ export default function ViewRecipe() {
                 color: "white",
                 textAlign: "center",
                 marginRight: 12,
+                padding: 12,
                 fontSize: 20,
                 backgroundColor: "#ccdc90",
                 width: "50%",
@@ -127,6 +132,7 @@ export default function ViewRecipe() {
               textAlign: "center",
               fontSize: 32,
               margin: 24,
+              padding: 12,
             }}
           >
             INGREDIENTS

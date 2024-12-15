@@ -1,7 +1,8 @@
 import { View, Text, ScrollView, Button } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 
 const ShoppingList = () => {
+  const [ShoppingList, setShoppingList] = useState([]);
   return (
     <View style={{ width: "100%", height: "100%" }}>
       <Text

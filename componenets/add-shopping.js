@@ -14,7 +14,17 @@ const ToShopping = ({ ingredients, getList }) => {
   return (
     <View>
       <Pressable onPress={addToShopping} disabled={isDisabled}>
-        <Text>add</Text>
+        <Text
+          style={{
+            backgroundColor: "#ccdc90",
+            textAlign: "center",
+            fontWeight: "bold",
+            color: "white",
+            padding: 6,
+          }}
+        >
+          ADD
+        </Text>
       </Pressable>
     </View>
   );

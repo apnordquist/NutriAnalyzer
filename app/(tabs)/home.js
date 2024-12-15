@@ -10,14 +10,17 @@ const Home = () => {
       <View style={styles.Menu}>
         <Button
           title="View Recipes"
+          color="#ccdc90"
           onPress={() => navigation.navigate("recipes")}
         />
         <Button
           title="Add Recipes"
+          color="#ccdc90"
           onPress={() => navigation.navigate("add-recipe")}
         />
         <Button
           title="Shopping List"
+          color="#ccdc90"
           onPress={() => navigation.navigate("shoppinglist")}
         />
       </View>
@@ -39,8 +42,9 @@ const styles = StyleSheet.create({
     display: "flex",
     alignContent: "center",
     justifyContent: "center",
-    marginTop: "auto",
-    marginBottom: "auto",
     gap: 12,
+    width: "60%",
+    justifyContent: "center",
+    margin: "auto",
   },
 });

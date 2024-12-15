@@ -17,7 +17,12 @@ const Index = () => {
 
   return (
     <View style={styles.main}>
-      <Button title="Login" onPress={HandleSignIn}></Button>
+      <Button
+        title="Login"
+        onPress={HandleSignIn}
+        color= "#ccdc90"
+        style={{ backgroundColor: "#ccdc90" }}
+      ></Button>
     </View>
   );
 };
@@ -26,7 +31,7 @@ export default Index;
 
 const styles = StyleSheet.create({
   main: {
-    width: "75%",
+    width: "60%",
     justifyContent: "center",
     alignContent: "center",
     margin: "auto",
